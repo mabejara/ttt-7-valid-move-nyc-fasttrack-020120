@@ -3,11 +3,9 @@ board = [" ", " ", " ", "X", " ", "O", " ", " ", " "]
 def valid_move?(board, index)
   if position_taken?(board,index)
     false
-  elsif index.is_a? Integer
+  else index.is_a? Integer && index.between?(0,8)
     true
-  else index.between?(0,8)
-    true
-  end
+    end
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
